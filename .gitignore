@@ -1,0 +1,9 @@
+wp/wp*
+wp/index.php
+wp/license.txt
+wp/readme.html
+wp/xmlrpc.php
+wp/.htaccess
+wp/.dump*
+db/*
+jenkins/*
