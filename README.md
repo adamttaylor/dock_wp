@@ -4,6 +4,15 @@ GSMA Docker Setup
 This repo is currently configured to set up the multi m360 site but eventually it will be a springboard to set up other sites.
 Ther gitignore file is set up to ignore all wp-contents and the files in /db but eventually the /db files can be set inthe repo to store the databse backups
 
+## History
+- This repo was set up to be quick way to switch between different local site instilations as gsma had 50 sites/subsites
+- Junior developers didn't have compentency with command line or dev ops so this was a streamlined solution to pull a database,theme,set of plugins using a .env file. 
+- Using a .sh script, it starts the docker sql container checks to see if the db in the .env file exists otherwise creates it (docker mysql isn't set up to do this inherantely) then stops the container and runs docker-compose up
+- It sets up memcached, wordpress, mysql, phpmyadmin
+- It looks for public WP themes/plugins set in the .env
+- It looks for proprietary themes/plugins in the github organization and pull them down
+- The databse import aspect was never finished
+
 ### Features
 - wp install, mysql, memcached, phpmyadmin(local) automatic plugin install, automatic theme install
 
